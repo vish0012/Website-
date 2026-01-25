@@ -2,6 +2,12 @@
 
 This is a simple static website template for Human–Machine Interaction researcher Vishal Chauhan.
 
+## 🌐 Website Link
+
+**Live Website:** https://vish0012.github.io/Website-/
+
+The website is hosted on GitHub Pages and showcases research, publications, projects, experience, and contact information.
+
 Files included
 - `index.html` — main page
 - `styles.css` — styling
