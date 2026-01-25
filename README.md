@@ -8,6 +8,22 @@ This is a simple static website template for Human–Machine Interaction researc
 
 The website is hosted on GitHub Pages and showcases research, publications, projects, experience, and contact information.
 
+### Setting up GitHub Pages (First Time Setup)
+
+To make your website accessible at the URL above, follow these steps:
+
+1. **Merge this PR** into the `main` branch
+2. **Enable GitHub Pages** in your repository:
+   - Go to your repository on GitHub
+   - Click **Settings** → **Pages** (in the left sidebar)
+   - Under "Build and deployment":
+     - **Source**: Select "GitHub Actions"
+   - Click **Save**
+3. Wait 1-2 minutes for the deployment to complete
+4. Your website will be live at https://vish0012.github.io/Website-/
+
+**Note:** A GitHub Actions workflow (`.github/workflows/deploy.yml`) has been added to automatically deploy your website whenever you push changes to the main branch.
+
 Files included
 - `index.html` — main page
 - `styles.css` — styling
