@@ -8,21 +8,33 @@ This is a simple static website template for Human–Machine Interaction researc
 
 The website is hosted on GitHub Pages and showcases research, publications, projects, experience, and contact information.
 
-### Setting up GitHub Pages (First Time Setup)
+### Quick Setup (Enable GitHub Pages NOW)
 
-To make your website accessible at the URL above, follow these steps:
+**You don't need to merge this PR first!** Follow these steps to make your website live immediately:
 
-1. **Merge this PR** into the `main` branch
-2. **Enable GitHub Pages** in your repository:
-   - Go to your repository on GitHub
-   - Click **Settings** → **Pages** (in the left sidebar)
+1. **Enable GitHub Pages** in your repository:
+   - Go to your repository on GitHub: https://github.com/vish0012/Website-
+   - Click **Settings** (top navigation bar)
+   - Click **Pages** (in the left sidebar under "Code and automation")
    - Under "Build and deployment":
-     - **Source**: Select "GitHub Actions"
-   - Click **Save**
-3. Wait 1-2 minutes for the deployment to complete
-4. Your website will be live at https://vish0012.github.io/Website-/
+     - **Source**: Select **"GitHub Actions"** from the dropdown
+   - The page will auto-save
+   
+2. **Trigger the deployment**:
+   - This commit includes a workflow that will deploy automatically
+   - The workflow will run when you push to this branch
+   - Or you can manually trigger it: Go to **Actions** tab → **Deploy static content to Pages** → **Run workflow**
 
-**Note:** A GitHub Actions workflow (`.github/workflows/deploy.yml`) has been added to automatically deploy your website whenever you push changes to the main branch.
+3. **Wait for deployment** (1-2 minutes):
+   - Go to the **Actions** tab in your repository
+   - You'll see "Deploy static content to Pages" running
+   - Wait for the green checkmark ✓
+   
+4. **Access your website**:
+   - Visit: https://vish0012.github.io/Website-/
+   - Your site is now live! 🎉
+
+**Note:** A GitHub Actions workflow (`.github/workflows/deploy.yml`) has been added to automatically deploy your website.
 
 Files included
 - `index.html` — main page
