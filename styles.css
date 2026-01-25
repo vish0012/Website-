@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vishal Chauhan — Human–Machine Interaction Researcher</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:,">
+  <meta name="description" content="Vishal Chauhan — HMI researcher working on pedestrian–AV interaction, autonomous vehicles, and robotics. Based in Tokyo." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Vishal Chauhan</a>
+      <nav id="nav" class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Vishal Chauhan</h1>
+          <p class="muted">Human–Machine Interaction researcher — autonomous vehicles, robotics, eHMI</p>
+          <p class="contact-line">
+            Tokyo, Japan · <a href="mailto:vishalchauhan@outlook.sg">vishalchauhan@outlook.sg</a> · <a href="tel:+818074577773">+81 80-7457-7773</a>
+          </p>
+          <p class="cta">
+            <a class="btn" href="#publications">Publications</a>
+            <a class="btn outline" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+          </p>
+          <p class="small">
+            GitHub: <a href="https://github.com/vish0012" target="_blank">vish0012</a> · Scholar: <a href="#" id="scholar-link" target="_blank">Google Scholar</a> · UTokyo Lab
+          </p>
+        </div>
+        <aside class="hero-card" aria-labelledby="summary-heading">
+          <h3 id="summary-heading">Summary</h3>
+          <p>
+            I work on HMI, autonomous vehicles, and robotics. I design and prototype pedestrian–AV interaction approaches and validate them through simulation (Virtual Reality, AWSIM) and real-world experiments. I support Autoware engineering across simulation and real-robot pipelines and contribute to CI improvements for scenario testing.
+          </p>
+          <p class="muted small">Recent: ACM CHI 2026 full paper accepted — short video overview available.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <h2>Research & Focus Areas</h2>
+        <ul class="bullets">
+          <li>Pedestrian–AV interaction & eHMI prototyping — VR & physical testing</li>
+          <li>Simulation-driven evaluation (Unity, AWSIM, CARLA)</li>
+          <li>Autoware, ROS2, scenario testing, CI reliability</li>
+          <li>Experimental design, survey analysis, reproducible pipelines</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications" class="section alt">
+      <div class="container">
+        <h2>Selected Publications</h2>
+        <ol class="pub-list">
+          <li>
+            V. Chauhan, A. et al. "Don’t Worry, Just Follow Me: Prototyping and In-the-Wild Evaluation of Smart Pole Interaction Unit with Mobility." ACM CHI 2026 (Accepted).
+          </li>
+          <li>
+            V. Chauhan, A. et al. "A Silent Negotiator? Cross-cultural VR Evaluation of Smart Pole Interaction Units in Dynamic Shared Spaces." ACM VRST, 2025.
+          </li>
+          <li>
+            V. Chauhan, C.-M. Chang, et al. "Towards the future of pedestrian–AV interaction: Human perception vs. LLM insights on Smart Pole Interaction Unit in shared spaces." IJHCS, 2025.
+          </li>
+          <li><a href="#" target="_blank">Full list on Google Scholar</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects & Open Source</h2>
+
+        <div class="project">
+          <h3>Simulation-driven Interaction Evaluation (Unity/AWSIM)</h3>
+          <p>tlab-wide/Smartpole-VR-AWSIM — Unity + AWSIM scenarios, metrics, and repeatable testbeds for eHMI research (2023–2024).</p>
+        </div>
+
+        <div class="project">
+          <h3>EvenDemoApp (audio-recorder)</h3>
+          <p>Proof-of-concept Flutter/Dart audio recording + transcription app. <a href="https://github.com/vish0012/EvenDemoApp" target="_blank">github.com/vish0012/EvenDemoApp</a></p>
+        </div>
+
+        <div class="project">
+          <h3>Autoware contributions</h3>
+          <p>Contributor to Autoware Foundation projects — scenario-test CI reliability and config schema updates (2025).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt">
+      <div class="container">
+        <h2>Experience</h2>
+
+        <article class="card">
+          <h4>Autonomous Driving Engineer (Part-time) — Tier IV, Tokyo (Dec 2024 – Present)</h4>
+          <ul>
+            <li>Created JSON schemas, updated docs, maintained PRs across Autoware Universe.</li>
+            <li>Executed planning simulation & scenario tests for Pilot.Auto S1; synced parameters and improved health-check scripts.</li>
+            <li>Contributed fixes to Autoware scenario-test GitHub Actions to improve CI reliability.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h4>Advanced AI Development Dept (Assistant) — Visionary Lab (Dec 2024 – Mar 2025)</h4>
+          <ul>
+            <li>Built end-to-end audio recording & transcription prototype in Flutter/Dart for reality-glass testing.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h4>Visiting Researcher — NTNU Gjøvik (Aug 2024 – Sep 2024)</h4>
+          <ul>
+            <li>Built VR scenarios to evaluate human vs. LLM decision models for pedestrian–AV interaction.</li>
+          </ul>
+        </article>
+
+        <p class="muted small">More roles: Zeroney.ai (Advisor), RIKEN (Research Intern), ispace (Intern), National Chung Cheng University (Research Intern).</p>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container two-col">
+        <div>
+          <h3>Education</h3>
+          <p>The University of Tokyo — PhD, Creative Informatics Fellowship (Oct 2023 – Oct 2026)</p>
+          <p>The University of Tokyo — M.S., Intelligent Information Processing (Oct 2021 – Oct 2023)</p>
+          <p>Vel Tech + NTU Singapore — B.Tech, Information Technology (2016 – 2020)</p>
+        </div>
+        <div>
+          <h3>Skills & Tools</h3>
+          <ul>
+            <li>Programming: Python, C++</li>
+            <li>Robotics & Simulation: ROS2, Autoware, CARLA, AWSIM, Unity</li>
+            <li>Tools: Git, Linux, Docker</li>
+            <li>Data: Pandas, NumPy, Matplotlib</li>
+            <li>Testing: Scenario regression testing, GitHub Actions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Based in Tokyo. For collaboration, speaking, or research inquiries:</p>
+        <p><strong>Email:</strong> <a href="mailto:vishalchauhan@outlook.sg">vishalchauhan@outlook.sg</a> · <strong>Phone:</strong> <a href="tel:+818074577773">+81 80-7457-7773</a></p>
+        <p>Or connect via GitHub: <a href="https://github.com/vish0012" target="_blank">github.com/vish0012</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Vishal Chauhan — Human–Machine Interaction Researcher · Tokyo</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
