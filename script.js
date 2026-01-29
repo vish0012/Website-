@@ -33,6 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
     scholarLink.setAttribute('aria-label', 'Visit Google Scholar profile');
   }
   
+  // Update all other Google Scholar links
+  const scholarLinks = document.querySelectorAll('a[href="#"]');
+  scholarLinks.forEach(link => {
+    if (link.textContent.includes('Google Scholar')) {
+      link.href = 'https://scholar.google.com/';
+      link.setAttribute('aria-label', 'Visit Google Scholar for full publication list');
+    }
+  });
+  
   // Smooth scroll behavior for anchor links (fallback for older browsers)
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
