@@ -1,176 +1,692 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vishal Chauhan — Human–Machine Interaction Researcher</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:,">
+  
+  <!-- SEO Meta Tags -->
   <meta name="description" content="Vishal Chauhan — HMI researcher working on pedestrian–AV interaction, autonomous vehicles, and robotics. Based in Tokyo." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="keywords" content="HMI, Human-Machine Interaction, Autonomous Vehicles, Robotics, Research, Tokyo" />
+  <meta name="author" content="Vishal Chauhan" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Vishal Chauhan — Human–Machine Interaction Researcher" />
+  <meta property="og:description" content="HMI researcher working on pedestrian–AV interaction, autonomous vehicles, and robotics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vish0012.github.io/Website-/" />
+  <meta property="og:site_name" content="Vishal Chauhan" />
+  <meta property="og:image" content="https://vish0012.github.io/Website-/og-image.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  
+  <!-- Google Fonts - Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+  
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: '#6366f1',
+            secondary: '#8b5cf6',
+            accent: '#ec4899',
+            dark: '#0f172a',
+            light: '#f8fafc',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" crossorigin="anonymous"/>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home">Vishal Chauhan</a>
-      <nav id="nav" class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+<body class="font-inter antialiased bg-gradient-to-br from-slate-50 to-blue-50">
+  <!-- Header with modern design -->
+  <header class="site-header fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200 shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a class="brand text-2xl font-bold font-poppins bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:scale-105 transition-transform duration-300" href="#home">
+          Vishal Chauhan
+        </a>
+        <nav id="nav" class="nav hidden md:flex items-center gap-1" aria-label="Primary">
+          <a href="#about" class="nav-link px-4 py-2 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">About</a>
+          <a href="#research" class="nav-link px-4 py-2 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Research</a>
+          <a href="#publications" class="nav-link px-4 py-2 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Publications</a>
+          <a href="#projects" class="nav-link px-4 py-2 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Projects</a>
+          <a href="#experience" class="nav-link px-4 py-2 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Experience</a>
+          <a href="#contact" class="nav-link px-4 py-2 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Contact</a>
+        </nav>
+        <button id="nav-toggle" class="nav-toggle md:hidden text-3xl text-slate-700 hover:text-primary transition-colors duration-300" aria-label="Toggle navigation">
+          <span class="block">☰</span>
+        </button>
+      </div>
+      <!-- Mobile Navigation -->
+      <nav id="mobile-nav" class="mobile-nav hidden md:hidden mt-4 pb-4 animate__animated animate__fadeInDown">
+        <div class="flex flex-col gap-2">
+          <a href="#about" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">About</a>
+          <a href="#research" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Research</a>
+          <a href="#publications" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Publications</a>
+          <a href="#projects" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Projects</a>
+          <a href="#experience" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Experience</a>
+          <a href="#contact" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/10 transition-all duration-300">Contact</a>
+        </div>
       </nav>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Vishal Chauhan</h1>
-          <p class="muted">Human–Machine Interaction researcher — autonomous vehicles, robotics, eHMI</p>
-          <p class="contact-line">
-            Tokyo, Japan · <a href="mailto:vishalchauhan@outlook.sg">vishalchauhan@outlook.sg</a> · <a href="tel:+818074577773">+81 80-7457-7773</a>
-          </p>
-          <p class="cta">
-            <a class="btn" href="#publications">Publications</a>
-            <a class="btn outline" href="#contact">Request CV</a>
-          </p>
-          <p class="small">
-            GitHub: <a href="https://github.com/vish0012" target="_blank">vish0012</a> · Scholar: <a href="#" id="scholar-link" target="_blank">Google Scholar</a> · UTokyo Lab
-          </p>
+  <main class="pt-20">
+    <!-- Hero Section with Modern Design -->
+    <section id="home" class="hero min-h-screen flex items-center py-20 relative overflow-hidden">
+      <!-- Background Decorations -->
+      <div class="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
+          <div class="lg:col-span-3 animate__animated animate__fadeInLeft">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold font-poppins mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
+              Vishal Chauhan
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 mb-4 font-medium">
+              Human–Machine Interaction researcher — autonomous vehicles, robotics, eHMI
+            </p>
+            <p class="text-lg text-slate-500 mb-8">
+              <span class="inline-flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                Tokyo, Japan
+              </span>
+              <span class="mx-3">·</span>
+              <a href="mailto:vishalchauhan@outlook.sg" class="hover:text-primary transition-colors duration-300 inline-flex items-center gap-1">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                vishalchauhan@outlook.sg
+              </a>
+              <span class="mx-3">·</span>
+              <a href="tel:+818074577773" class="hover:text-primary transition-colors duration-300 inline-flex items-center gap-1">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                +81 80-7457-7773
+              </a>
+            </p>
+            
+            <div class="flex flex-wrap gap-4 mb-8">
+              <a href="#publications" class="btn-primary px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                View Publications
+              </a>
+              <a href="#contact" class="btn-outline px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary hover:text-white transition-all duration-300">
+                Request CV
+              </a>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-6 text-sm">
+              <a href="https://github.com/vish0012" target="_blank" class="flex items-center gap-2 text-slate-600 hover:text-primary transition-colors duration-300 group">
+                <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span class="font-medium">vish0012</span>
+              </a>
+              <a href="https://scholar.google.com/citations" id="scholar-link" target="_blank" class="flex items-center gap-2 text-slate-600 hover:text-primary transition-colors duration-300 group">
+                <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+                <span class="font-medium">Google Scholar</span>
+              </a>
+              <span class="text-slate-600">UTokyo Lab</span>
+            </div>
+          </div>
+          
+          <aside class="lg:col-span-2 animate__animated animate__fadeInRight" aria-labelledby="summary-heading">
+            <div class="bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-2xl">
+                  📋
+                </div>
+                <h3 id="summary-heading" class="text-2xl font-bold font-poppins text-slate-800">Summary</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                I work on HMI, autonomous vehicles, and robotics. I design and prototype pedestrian–AV interaction approaches and validate them through simulation (Virtual Reality, AWSIM) and real-world experiments. I support Autoware engineering across simulation and real-robot pipelines and contribute to CI improvements for scenario testing.
+              </p>
+              <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-4 border-l-4 border-primary">
+                <p class="text-sm text-slate-700">
+                  <span class="font-semibold">🎉 Recent:</span> ACM CHI 2026 full paper accepted — short video overview available.
+                </p>
+              </div>
+            </div>
+          </aside>
         </div>
-        <aside class="hero-card" aria-labelledby="summary-heading">
-          <h3 id="summary-heading">Summary</h3>
-          <p>
-            I work on HMI, autonomous vehicles, and robotics. I design and prototype pedestrian–AV interaction approaches and validate them through simulation (Virtual Reality, AWSIM) and real-world experiments. I support Autoware engineering across simulation and real-robot pipelines and contribute to CI improvements for scenario testing.
-          </p>
-          <p class="muted small">Recent: ACM CHI 2026 full paper accepted — short video overview available.</p>
-        </aside>
       </div>
     </section>
 
-    <section id="research" class="section">
-      <div class="container">
-        <h2>Research & Focus Areas</h2>
-        <ul class="bullets">
-          <li>Pedestrian–AV interaction & eHMI prototyping — VR & physical testing</li>
-          <li>Simulation-driven evaluation (Unity, AWSIM, CARLA)</li>
-          <li>Autoware, ROS2, scenario testing, CI reliability</li>
-          <li>Experimental design, survey analysis, reproducible pipelines</li>
-        </ul>
+    <!-- Research Section -->
+    <section id="research" class="section py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate__animated animate__fadeInUp">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Research & Focus Areas
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div class="research-card group bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center text-white text-2xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                🚗
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Pedestrian–AV interaction & eHMI prototyping — VR & physical testing
+              </p>
+            </div>
+          </div>
+          
+          <div class="research-card group bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                🎮
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Simulation-driven evaluation (Unity, AWSIM, CARLA)
+              </p>
+            </div>
+          </div>
+          
+          <div class="research-card group bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border border-green-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center text-white text-2xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                🤖
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Autoware, ROS2, scenario testing, CI reliability
+              </p>
+            </div>
+          </div>
+          
+          <div class="research-card group bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border border-orange-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center text-white text-2xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                📊
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Experimental design, survey analysis, reproducible pipelines
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="publications" class="section alt">
-      <div class="container">
-        <h2>Selected Publications</h2>
-        <ol class="pub-list">
-          <li>
-            V. Chauhan, A. et al. "Don’t Worry, Just Follow Me: Prototyping and In-the-Wild Evaluation of Smart Pole Interaction Unit with Mobility." ACM CHI 2026 (Accepted).
+    <!-- Publications Section -->
+    <section id="publications" class="section py-20 bg-gradient-to-b from-slate-50 to-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate__animated animate__fadeInUp">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Selected Publications
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        </div>
+        
+        <ol class="space-y-6 max-w-5xl mx-auto">
+          <li class="group bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                1
+              </div>
+              <div class="flex-1">
+                <p class="text-slate-700 leading-relaxed">
+                  V. Chauhan, A. et al. <span class="font-semibold text-slate-900">"Don't Worry, Just Follow Me: Prototyping and In-the-Wild Evaluation of Smart Pole Interaction Unit with Mobility."</span> <span class="text-primary font-medium">ACM CHI 2026</span> <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium ml-2">Accepted</span>
+                </p>
+              </div>
+            </div>
           </li>
-          <li>
-            V. Chauhan, A. et al. "A Silent Negotiator? Cross-cultural VR Evaluation of Smart Pole Interaction Units in Dynamic Shared Spaces." ACM VRST, 2025.
+          
+          <li class="group bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                2
+              </div>
+              <div class="flex-1">
+                <p class="text-slate-700 leading-relaxed">
+                  V. Chauhan, A. et al. <span class="font-semibold text-slate-900">"A Silent Negotiator? Cross-cultural VR Evaluation of Smart Pole Interaction Units in Dynamic Shared Spaces."</span> <span class="text-secondary font-medium">ACM VRST, 2025</span>
+                </p>
+              </div>
+            </div>
           </li>
-          <li>
-            V. Chauhan, C.-M. Chang, et al. "Towards the future of pedestrian–AV interaction: Human perception vs. LLM insights on Smart Pole Interaction Unit in shared spaces." IJHCS, 2025.
+          
+          <li class="group bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-accent to-orange-500 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                3
+              </div>
+              <div class="flex-1">
+                <p class="text-slate-700 leading-relaxed">
+                  V. Chauhan, C.-M. Chang, et al. <span class="font-semibold text-slate-900">"Towards the future of pedestrian–AV interaction: Human perception vs. LLM insights on Smart Pole Interaction Unit in shared spaces."</span> <span class="text-accent font-medium">IJHCS, 2025</span>
+                </p>
+              </div>
+            </div>
           </li>
-          <li><a href="#" target="_blank">Full list on Google Scholar</a></li>
+          
+          <li class="group bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-2xl border border-primary/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="flex gap-4 items-center">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+                📚
+              </div>
+              <div class="flex-1">
+                <a href="https://scholar.google.com/citations" target="_blank" class="text-primary font-semibold text-lg hover:text-secondary transition-colors duration-300 inline-flex items-center gap-2">
+                  View Full Publication List on Google Scholar
+                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </li>
         </ol>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects & Open Source</h2>
-
-        <div class="project">
-          <h3>Simulation-driven Interaction Evaluation (Unity/AWSIM)</h3>
-          <p>tlab-wide/Smartpole-VR-AWSIM — Unity + AWSIM scenarios, metrics, and repeatable testbeds for eHMI research (2023–2024).</p>
+    <!-- Projects Section -->
+    <section id="projects" class="section py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate__animated animate__fadeInUp">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Projects & Open Source
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
         </div>
 
-        <div class="project">
-          <h3>EvenDemoApp (audio-recorder)</h3>
-          <p>Proof-of-concept Flutter/Dart audio recording + transcription app. <a href="https://github.com/vish0012/EvenDemoApp" target="_blank">github.com/vish0012/EvenDemoApp</a></p>
-        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div class="project group bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border border-blue-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                🎮
+              </div>
+              <h3 class="text-xl font-bold font-poppins text-slate-800">Simulation Evaluation</h3>
+            </div>
+            <p class="text-slate-700 leading-relaxed mb-3">
+              <span class="font-semibold text-slate-900">tlab-wide/Smartpole-VR-AWSIM</span> — Unity + AWSIM scenarios, metrics, and repeatable testbeds for eHMI research
+            </p>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="px-3 py-1 bg-blue-200 text-blue-700 rounded-full font-medium">Unity</span>
+              <span class="px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full font-medium">AWSIM</span>
+            </div>
+            <div class="mt-3 text-xs text-slate-500">2023–2024</div>
+          </div>
 
-        <div class="project">
-          <h3>Autoware contributions</h3>
-          <p>Contributor to Autoware Foundation projects — scenario-test CI reliability and config schema updates (2025).</p>
-        </div>
-      </div>
-    </section>
+          <div class="project group bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-2xl border border-purple-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                🎙️
+              </div>
+              <h3 class="text-xl font-bold font-poppins text-slate-800">EvenDemoApp</h3>
+            </div>
+            <p class="text-slate-700 leading-relaxed mb-3">
+              Proof-of-concept Flutter/Dart audio recording + transcription app for reality-glass testing
+            </p>
+            <a href="https://github.com/vish0012/EvenDemoApp" target="_blank" class="inline-flex items-center gap-2 text-purple-600 hover:text-pink-600 font-medium transition-colors duration-300 group/link">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+              <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <div class="flex items-center gap-2 text-sm text-slate-600 mt-3">
+              <span class="px-3 py-1 bg-purple-200 text-purple-700 rounded-full font-medium">Flutter</span>
+              <span class="px-3 py-1 bg-pink-200 text-pink-700 rounded-full font-medium">Dart</span>
+            </div>
+          </div>
 
-    <section id="experience" class="section alt">
-      <div class="container">
-        <h2>Experience</h2>
-
-        <article class="card">
-          <h4>Autonomous Driving Engineer (Part-time) — Tier IV, Tokyo (Dec 2024 – Present)</h4>
-          <ul>
-            <li>Created JSON schemas, updated docs, maintained PRs across Autoware Universe.</li>
-            <li>Executed planning simulation & scenario tests for Pilot.Auto S1; synced parameters and improved health-check scripts.</li>
-            <li>Contributed fixes to Autoware scenario-test GitHub Actions to improve CI reliability.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h4>Advanced AI Development Dept (Assistant) — Visionary Lab (Dec 2024 – Mar 2025)</h4>
-          <ul>
-            <li>Built end-to-end audio recording & transcription prototype in Flutter/Dart for reality-glass testing.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h4>Visiting Researcher — NTNU Gjøvik (Aug 2024 – Sep 2024)</h4>
-          <ul>
-            <li>Built VR scenarios to evaluate human vs. LLM decision models for pedestrian–AV interaction.</li>
-          </ul>
-        </article>
-
-        <p class="muted small">More roles: Zeroney.ai (Advisor), RIKEN (Research Intern), ispace (Intern), National Chung Cheng University (Research Intern).</p>
-      </div>
-    </section>
-
-    <section id="education" class="section">
-      <div class="container two-col">
-        <div>
-          <h3>Education</h3>
-          <p>The University of Tokyo — PhD, Creative Informatics Fellowship (Oct 2023 – Oct 2026)</p>
-          <p>The University of Tokyo — M.S., Intelligent Information Processing (Oct 2021 – Oct 2023)</p>
-          <p>Vel Tech + NTU Singapore — B.Tech, Information Technology (2016 – 2020)</p>
-        </div>
-        <div>
-          <h3>Skills & Tools</h3>
-          <ul>
-            <li>Programming: Python, C++</li>
-            <li>Robotics & Simulation: ROS2, Autoware, CARLA, AWSIM, Unity</li>
-            <li>Tools: Git, Linux, Docker</li>
-            <li>Data: Pandas, NumPy, Matplotlib</li>
-            <li>Testing: Scenario regression testing, GitHub Actions</li>
-          </ul>
+          <div class="project group bg-gradient-to-br from-green-50 to-teal-100 p-6 rounded-2xl border border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                🤖
+              </div>
+              <h3 class="text-xl font-bold font-poppins text-slate-800">Autoware</h3>
+            </div>
+            <p class="text-slate-700 leading-relaxed mb-3">
+              Contributor to Autoware Foundation projects — scenario-test CI reliability and config schema updates
+            </p>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="px-3 py-1 bg-green-200 text-green-700 rounded-full font-medium">ROS2</span>
+              <span class="px-3 py-1 bg-teal-200 text-teal-700 rounded-full font-medium">CI/CD</span>
+            </div>
+            <div class="mt-3 text-xs text-slate-500">2025</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Based in Tokyo. For collaboration, speaking, or research inquiries:</p>
-        <p><strong>Email:</strong> <a href="mailto:vishalchauhan@outlook.sg">vishalchauhan@outlook.sg</a> · <strong>Phone:</strong> <a href="tel:+818074577773">+81 80-7457-7773</a></p>
-        <p>Or connect via GitHub: <a href="https://github.com/vish0012" target="_blank">github.com/vish0012</a></p>
-        <p class="muted small">CV available upon request via email.</p>
+    <!-- Experience Section -->
+    <section id="experience" class="section py-20 bg-gradient-to-b from-slate-50 to-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate__animated animate__fadeInUp">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Experience
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        </div>
+
+        <div class="space-y-6 max-w-5xl mx-auto">
+          <article class="card group bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+                🚗
+              </div>
+              <div class="flex-1">
+                <h4 class="text-xl font-bold font-poppins text-slate-900 mb-2">Autonomous Driving Engineer (Part-time)</h4>
+                <p class="text-primary font-semibold mb-1">Tier IV, Tokyo</p>
+                <p class="text-sm text-slate-500 mb-4">Dec 2024 – Present</p>
+                <ul class="space-y-2 text-slate-700">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Created JSON schemas, updated docs, maintained PRs across Autoware Universe</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Executed planning simulation & scenario tests for Pilot.Auto S1; synced parameters and improved health-check scripts</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Contributed fixes to Autoware scenario-test GitHub Actions to improve CI reliability</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card group bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+                🤖
+              </div>
+              <div class="flex-1">
+                <h4 class="text-xl font-bold font-poppins text-slate-900 mb-2">Advanced AI Development Dept (Assistant)</h4>
+                <p class="text-secondary font-semibold mb-1">Visionary Lab</p>
+                <p class="text-sm text-slate-500 mb-4">Dec 2024 – Mar 2025</p>
+                <ul class="space-y-2 text-slate-700">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Built end-to-end audio recording & transcription prototype in Flutter/Dart for reality-glass testing</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card group bg-white p-8 rounded-2xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-accent to-orange-500 rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+                🎓
+              </div>
+              <div class="flex-1">
+                <h4 class="text-xl font-bold font-poppins text-slate-900 mb-2">Visiting Researcher</h4>
+                <p class="text-accent font-semibold mb-1">NTNU Gjøvik</p>
+                <p class="text-sm text-slate-500 mb-4">Aug 2024 – Sep 2024</p>
+                <ul class="space-y-2 text-slate-700">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Built VR scenarios to evaluate human vs. LLM decision models for pedestrian–AV interaction</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <div class="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-2xl border border-slate-200">
+            <p class="text-slate-600 text-center">
+              <span class="font-semibold text-slate-800">Additional roles:</span> Zeroney.ai (Advisor), RIKEN (Research Intern), ispace (Intern), National Chung Cheng University (Research Intern)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Skills Section -->
+    <section id="education" class="section py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate__animated animate__fadeInUp">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Education & Skills
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <!-- Education Column -->
+          <div class="space-y-6">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white text-2xl">
+                🎓
+              </div>
+              <h3 class="text-2xl font-bold font-poppins text-slate-800">Education</h3>
+            </div>
+
+            <div class="group bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+              <div class="flex items-start gap-3 mb-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  PhD
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-bold text-slate-900 mb-1">The University of Tokyo</h4>
+                  <p class="text-sm text-slate-700 mb-1">Creative Informatics Fellowship</p>
+                  <p class="text-xs text-slate-500">Oct 2023 – Oct 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="group bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+              <div class="flex items-start gap-3 mb-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  M.S.
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-bold text-slate-900 mb-1">The University of Tokyo</h4>
+                  <p class="text-sm text-slate-700 mb-1">Intelligent Information Processing</p>
+                  <p class="text-xs text-slate-500">Oct 2021 – Oct 2023</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="group bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl border border-green-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+              <div class="flex items-start gap-3 mb-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  B.T.
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-bold text-slate-900 mb-1">Vel Tech + NTU Singapore</h4>
+                  <p class="text-sm text-slate-700 mb-1">Information Technology</p>
+                  <p class="text-xs text-slate-500">2016 – 2020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Column -->
+          <div class="space-y-6">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-accent to-orange-500 rounded-xl flex items-center justify-center text-white text-2xl">
+                💻
+              </div>
+              <h3 class="text-2xl font-bold font-poppins text-slate-800">Skills & Tools</h3>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-500">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-primary rounded-full"></span>
+                    Programming
+                  </h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">C++</span>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-secondary rounded-full"></span>
+                    Robotics & Simulation
+                  </h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">ROS2</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Autoware</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">CARLA</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">AWSIM</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Unity</span>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-accent rounded-full"></span>
+                    Tools
+                  </h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Git</span>
+                    <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Linux</span>
+                    <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Docker</span>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    Data
+                  </h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Pandas</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">NumPy</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Matplotlib</span>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    Testing
+                  </h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">Scenario Testing</span>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">GitHub Actions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate__animated animate__fadeInUp">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Get in Touch
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-xl border border-slate-200">
+            <p class="text-xl text-slate-700 text-center mb-8">
+              Based in <span class="font-semibold text-primary">Tokyo</span>. Open to collaboration, speaking engagements, and research inquiries.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <a href="mailto:vishalchauhan@outlook.sg" class="group bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                <div class="flex items-center gap-4">
+                  <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+                    📧
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-bold text-slate-900 mb-1">Email</h4>
+                    <p class="text-sm text-slate-600 break-all">vishalchauhan@outlook.sg</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="tel:+818074577773" class="group bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                <div class="flex items-center gap-4">
+                  <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+                    📱
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-bold text-slate-900 mb-1">Phone</h4>
+                    <p class="text-sm text-slate-600">+81 80-7457-7773</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="flex justify-center">
+              <a href="https://github.com/vish0012" target="_blank" class="group inline-flex items-center gap-3 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <svg class="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Connect on GitHub
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+
+            <div class="mt-8 text-center">
+              <div class="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-secondary/10 px-6 py-3 rounded-full border border-primary/20">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-700">
+                  <span class="font-semibold">CV available</span> upon request via email
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© Vishal Chauhan — Human–Machine Interaction Researcher · Tokyo</p>
+  <!-- Footer -->
+  <footer class="site-footer bg-gradient-to-br from-slate-900 to-slate-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold font-poppins mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Vishal Chauhan
+            </h3>
+            <p class="text-slate-300">Human–Machine Interaction Researcher</p>
+            <p class="text-slate-400 text-sm flex items-center gap-2 justify-center md:justify-start mt-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+              Tokyo, Japan
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="https://github.com/vish0012" target="_blank" class="group w-12 h-12 bg-white/10 hover:bg-white/20 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://scholar.google.com/citations" target="_blank" class="group w-12 h-12 bg-white/10 hover:bg-white/20 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+            </a>
+            <a href="mailto:vishalchauhan@outlook.sg" class="group w-12 h-12 bg-white/10 hover:bg-white/20 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-8 pt-6 text-center">
+          <p class="text-slate-400 text-sm">
+            © <span id="current-year"></span> Vishal Chauhan — All rights reserved
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Update current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 
   <script src="script.js"></script>
 </body>
