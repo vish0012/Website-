@@ -6,13 +6,17 @@ document.addEventListener('DOMContentLoaded', function () {
   // Mobile navigation toggle
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('show');
+      const isOpen = nav.classList.toggle('show');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
     
     // Close nav when clicking outside
     document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-        nav.classList.remove('show');
+        if (nav.classList.contains('show')) {
+          nav.classList.remove('show');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
       }
     });
     
@@ -21,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -36,28 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // Update all other Google Scholar links
   const scholarLinks = document.querySelectorAll('a[href="#"]');
   scholarLinks.forEach(link => {
-    if (link.textContent.includes('Google Scholar')) {
+    const linkText = link.textContent.toLowerCase();
+    if (linkText.includes('google scholar') || linkText.includes('scholar')) {
       link.href = 'https://scholar.google.com/';
       link.setAttribute('aria-label', 'Visit Google Scholar for full publication list');
     }
   });
   
-  // Smooth scroll behavior for anchor links (fallback for older browsers)
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId !== '#') {
-        const target = document.querySelector(targetId);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      }
-    });
-  });
+  // Smooth scroll is handled by CSS scroll-behavior: smooth
+  // This code is intentionally removed to avoid conflicts
   
   // Add intersection observer for fade-in animations on scroll
   if ('IntersectionObserver' in window) {
@@ -75,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }, observerOptions);
     
-    // Observe sections for scroll animations
-    document.querySelectorAll('.section').forEach(section => {
+    // Observe sections for scroll animations (skip hero section to avoid animation conflicts)
+    document.querySelectorAll('.section:not(.hero)').forEach(section => {
       section.style.opacity = '0';
       section.style.transform = 'translateY(20px)';
       section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
